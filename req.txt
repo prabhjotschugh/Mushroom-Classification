@@ -2,4 +2,3 @@ Flask
 Gunicorn
 numpy
 pandas
-pickle
