@@ -13,7 +13,7 @@
 
 <div class="navbar">
   <div class="logo">
-      <a href="/"><img src="static\images\mushroom-img.png" alt="Logo"></a>
+    <a href="/"><img src="static\images\mushroom-img.png" alt="Logo"></a>
   </div>
   <h1>Mushroom Classifier</h1>
     <a href="https://prabhjotschugh.me/"><button class="navbar-button">About Me</button></a>
@@ -21,174 +21,200 @@
 
 <br>
 
-<form action='/predict' method='POST'>
-  <fieldset>
-    <br>
-    <center>
-
-      <label><b>Gill Color : </b></label>
-      <select class="form-select" id="gill-color" name="gill-color"  required>
-      <option value="selected disabled hidden"> Select </option>
-        <option value="4">Black</option>
-        <option value="5">Brown</option>
-        <option value="0">Buff</option>
-        <option value="3">Chocolate</option>
-        <option value="2">Gray</option>
-        <option value="8">Green</option>
-        <option value="6">Orange</option>
-        <option value="7">Pink</option>
-        <option value="9">Purple</option>
-        <option value="1">Red</option>
-        <option value="10">White</option>
-        <option value="11">Yellow</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Spore Print Color : </b></label>
-      <select class="form-select" id="spore-print-color" name="spore-print-color">
-        <option value="">Select</option>
-        <option value="2">Black</option>
-        <option value="3">Brown</option>
-        <option value="4">Orange</option>
-        <option value="1">Chocolate</option>
-        <option value="5">Green</option>
-        <option value="8">Yellow</option>
-        <option value="6">Purple</option>
-        <option value="7">White</option>
-        <option value="0">Buff</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Population : </b></label>
-      <select class="form-select" id="population" name="population"  required>
-      <option value="" selected disabled hidden> Select </option>
-        <option value="0">Abundant</option>
-        <option value="1">Clustered</option>
-        <option value="2">Numerous</option>
-        <option value="3">Scattered</option>
-        <option value="4">Several</option>
-        <option value="5">Solitary</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Gill Size : </b></label>
-      <select class="form-select" id="gill-size" name="gill-size"  required>
-      <option value="" selected disabled hidden>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-        <option value="0">Broad</option>
-        <option value="1">Narrow</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Stalk Root : </b></label>
-      <select class="form-select" id="stalk-root" name="stalk-root"  required>
-      <option value="" selected disabled hidden>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
-        <option value="0">Bulbous</option>
-        <option value="1">Club</option>
-        <option value="2">Equal</option>
-        <option value="3">Rooted</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Bruises : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
-      <select class="form-select" id="bruises" name="bruises"  required>
-      <option value="" selected disabled hidden> Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Gill Spacing : </b></label>
-      <select class="form-select" id="gill-spacing" name="gill-spacing"  required>
-      <option value="" selected disabled hidden> Select </option>
-        <option value="0">Close</option>
-        <option value="1">Crowded</option>
-      </select>
-      
-      <br><br>
-      
-      <label><b>Stalk Surface Above Ring : </b></label>
-      <select class="form-select" id="stalk-surface-above-ring" name="stalk-surface-above-ring"  required>
-      <option value="" selected disabled hidden>Select&nbsp;&nbsp;&nbsp;</option>
-        <option value="0">Fibrous</option>
-        <option value="1">Silky</option>
-        <option value="2">Smooth</option>
-        <option value="3">Scaly</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Stalk Surface Below Ring : </b></label>
-      <select class="form-select" id="stalk-surface-below-ring" name="stalk-surface-below-ring"  required>
-      <option value="" selected disabled hidden>Select&nbsp;&nbsp;&nbsp;</option>
-        <option value="0">Fibrous</option>
-        <option value="1">Silky</option>
-        <option value="2">Smooth</option>
-        <option value="3">Scaly</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Ring type&nbsp;&nbsp;&nbsp;</b></label>
-      <select class="form-select" id="ring-type" name="ring-type"  required>
-      <option value="" selected disabled hidden>Select&nbsp;&nbsp;&nbsp;</option>
-        <option value="0">Evanescent</option>
-        <option value="1">Flaring</option>
-        <option value="2">Large</option>
-        <option value="3">None</option>
-        <option value="4">Pendant</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Habitat : </b></label>
-      <select class="form-select" id="habitat" name="habitat"  required>
-      <option value="" selected disabled hidden> Select </option>
-        <option value="0">Woods</option>
-        <option value="1">Gasses</option>
-        <option value="2">Leaves</option>
-        <option value="3">Meadows</option>
-        <option value="4">Paths</option>
-        <option value="5">Urban</option>
-        <option value="5">Waste</option>
-      </select>
-
-      <br><br>
-      
-      <label><b>Odor : </b></label>
-      <select class="form-select" id="odor" name="odor">
-        <option value="">Select</option>
-        <option value="0">Almond</option>
-        <option value="1">Creosote</option>
-        <option value="2">Foul</option>
-        <option value="3">Anise</option>
-        <option value="4">Musty</option>
-        <option value="5">None</option>
-        <option value="6">Pungent</option>
-        <option value="7">Spicy</option>
-        <option value="8">Fishy</option>
-      </select>
-      <br><br>
-
+<div class="center-container">
+  <form action='/predict' method='POST'>
+    <fieldset>
+      <br>
       <center>
-          <br>
-          <a href="./"><img src="/static/images/mushroom.gif" width="40" height="50" class="responsive" align="middle"></a>
-          <br>
-          <button id="login-button" class="button" style="vertical-align:middle"><span>PREDICT</span></button>
-      </center>
-      
-      <br><br>
+        <div class="form-group">
+        <label><b>Gill Color : </b></label>
+        <select class="form-select" id="gill-color" name="gill-color"  required>
+        <option value="selected disabled hidden"> Select </option>
+          <option value="4">Black</option>
+          <option value="5">Brown</option>
+          <option value="0">Buff</option>
+          <option value="3">Chocolate</option>
+          <option value="2">Gray</option>
+          <option value="8">Green</option>
+          <option value="6">Orange</option>
+          <option value="7">Pink</option>
+          <option value="9">Purple</option>
+          <option value="1">Red</option>
+          <option value="10">White</option>
+          <option value="11">Yellow</option>
+        </select>
+        </div>
 
-    </center>
-  </fieldset>
-  <br>
-  <h2 style="color: #110601  "><center>{{result}}</center></h2>
-</form>
+        <br>
+        
+        <div class="form-group">
+        <label><b>Spore Print Color : </b></label>
+        <select class="form-select" id="spore-print-color" name="spore-print-color">
+          <option value="">Select</option>
+          <option value="2">Black</option>
+          <option value="3">Brown</option>
+          <option value="4">Orange</option>
+          <option value="1">Chocolate</option>
+          <option value="5">Green</option>
+          <option value="8">Yellow</option>
+          <option value="6">Purple</option>
+          <option value="7">White</option>
+          <option value="0">Buff</option>
+        </select>
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+        <label><b>Population : </b></label>
+        <select class="form-select" id="population" name="population"  required>
+        <option value="" selected disabled hidden> Select </option>
+          <option value="0">Abundant</option>
+          <option value="1">Clustered</option>
+          <option value="2">Numerous</option>
+          <option value="3">Scattered</option>
+          <option value="4">Several</option>
+          <option value="5">Solitary</option>
+        </select>
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+        <label><b>Gill Size : </b></label>
+        <select class="form-select" id="gill-size" name="gill-size"  required>
+        <option value="" selected disabled hidden>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="0">Broad</option>
+          <option value="1">Narrow</option>
+        </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+        <label><b>Stalk Root : </b></label>
+        <select class="form-select" id="stalk-root" name="stalk-root"  required>
+        <option value="" selected disabled hidden>Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+          <option value="0">Bulbous</option>
+          <option value="1">Club</option>
+          <option value="2">Equal</option>
+          <option value="3">Rooted</option>
+        </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+        <label><b>Bruises : </b></label>
+        <select class="form-select" id="bruises" name="bruises"  required>
+        <option value="" selected disabled hidden> Select&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+        <label><b>Gill Spacing : </b></label>
+        <select class="form-select" id="gill-spacing" name="gill-spacing"  required>
+        <option value="" selected disabled hidden> Select </option>
+          <option value="0">Close</option>
+          <option value="1">Crowded</option>
+        </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+        <label><b>Stalk Surface Above Ring : </b></label>
+        <select class="form-select" id="stalk-surface-above-ring" name="stalk-surface-above-ring"  required>
+        <option value="" selected disabled hidden>Select</option>
+          <option value="0">Fibrous</option>
+          <option value="1">Silky</option>
+          <option value="2">Smooth</option>
+          <option value="3">Scaly</option>
+        </select>
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+        <label><b>Stalk Surface Below Ring : </b></label>
+        <select class="form-select" id="stalk-surface-below-ring" name="stalk-surface-below-ring"  required>
+        <option value="" selected disabled hidden>Select</option>
+          <option value="0">Fibrous</option>
+          <option value="1">Silky</option>
+          <option value="2">Smooth</option>
+          <option value="3">Scaly</option>
+        </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+        <label><b>Ring type : </b></label>
+        <select class="form-select" id="ring-type" name="ring-type"  required>
+        <option value="" selected disabled hidden>Select</option>
+          <option value="0">Evanescent</option>
+          <option value="1">Flaring</option>
+          <option value="2">Large</option>
+          <option value="3">None</option>
+          <option value="4">Pendant</option>
+        </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+        <label><b>Habitat : </b></label>
+        <select class="form-select" id="habitat" name="habitat"  required>
+        <option value="" selected disabled hidden> Select </option>
+          <option value="0">Woods</option>
+          <option value="1">Gasses</option>
+          <option value="2">Leaves</option>
+          <option value="3">Meadows</option>
+          <option value="4">Paths</option>
+          <option value="5">Urban</option>
+          <option value="5">Waste</option>
+        </select>
+        </div>  
+
+        <br>
+
+        <div class="form-group">
+        <label><b>Odor : </b></label>
+        <select class="form-select" id="odor" name="odor">
+          <option value="">Select</option>
+          <option value="0">Almond</option>
+          <option value="1">Creosote</option>
+          <option value="2">Foul</option>
+          <option value="3">Anise</option>
+          <option value="4">Musty</option>
+          <option value="5">None</option>
+          <option value="6">Pungent</option>
+          <option value="7">Spicy</option>
+          <option value="8">Fishy</option>
+        </select>
+        </div>
+
+        <br>
+
+        <center>
+            <br>
+            <a href="./"><img src="images/mushroom.gif" width="40" height="50" class="responsive" align="middle"></a>
+            <br>
+            <button id="login-button" class="button" style="vertical-align:middle"><span>PREDICT</span></button>
+        </center>
+        
+        <br><br>
+
+      </center>
+    </fieldset>
+    <br>
+    <h2 style="color: #110601  "><center>{{result}}</center></h2>
+  </form>
+</div>
 
 <div class="footer">
   <p class="text-white">Designed with &#10084; by <b><a href="https://www.linkedin.com/in/prabhjot-singh-chugh/" style="border:none; outline:none; text-decoration:none; color:inherit;">Prabhjot Singh</a></b></p>
