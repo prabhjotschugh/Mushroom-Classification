@@ -53,17 +53,6 @@ h1{
   max-width: 80%; 
 }
 
-label{
-  position: absolute;
-  left: 50px;
-}
-
-.form-select{
-  position: absolute;
-  left: 275px;
-  width: 110px;
-}
-
 #login-button{
   background-color: #0B666A;
   color: white;
@@ -73,9 +62,15 @@ label{
   cursor: pointer;
 }
 
+.center-container {
+  display: flex;
+  justify-content: center;
+  
+  height: 100%;
+}  
+
+
 form{
-  position: relative;
-  left: 400px;
   border: 5px solid #0B666A;
   padding: 25px;
   margin: 25px;
@@ -83,6 +78,28 @@ form{
   background: #F8F0E5; 
   width: 25em;
   padding: 1em;
+  
+}
+
+.form-group {
+  display: flex;
+  
+}
+
+.form-group label {
+  width: 100%;
+  text-align: left;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.form-select{
+  
+    width: 45%;
+    text-align: center;
+    flex-direction: column;
+    margin-right: 20px;
+  
 }
 
 .footer {
